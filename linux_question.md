@@ -62,3 +62,26 @@ grep -i "error" app.log
 ```
 grep -r "Connection refused" /app/logs/
 ```
+
+## 11. How do you show lines before and after an error?
+```
+grep -A 5 -B 5 "ERROR" app.log
+```
+// -A means 5 Lines after
+// -B means 5 Lines before
+
+## 12. How do you find only today's logs?
+```
+grep "2026-07-08" app.log
+ls -rlt
+```
+
+## 13. How do you search multiple keywords?
+```
+grep -E "ERROR|FAILED|Exception" app.log 
+```
+
+## 14. How do you search logs by process/order/trade ID?
+```
+
+```
