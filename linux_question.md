@@ -83,5 +83,17 @@ grep -E "ERROR|FAILED|Exception" app.log
 
 ## 14. How do you search logs by process/order/trade ID?
 ```
+grep "ORD12345" app.log
+grep "ORD12345" *.log
+```
 
+## 15. How do you check if a file arrived today?
+```
+ls -l /data/incoming/
+
+// find file that modified within the last 24 hours.
+find /data/incoming -type f -mtime 0
+
+// file file that is greater than 0 bytes
+find /data/incoming -type f -size +0c
 ```
