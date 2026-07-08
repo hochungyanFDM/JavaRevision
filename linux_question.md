@@ -96,4 +96,7 @@ find /data/incoming -type f -mtime 0
 
 // file file that is greater than 0 bytes
 find /data/incoming -type f -size +0c
+
+// find file that is modified in the last 60 mins
+find . -type f -mmin -60
 ```
